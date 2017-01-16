@@ -1,99 +1,92 @@
 % Sample apostrophy's to remove team's 
 
-\title{Lessons Learned from Grappling with a 2.5 Year Participant Observation Study: Emergence of a Constructivist Grounded Theory Researcher: }
+\title{Lessons Learned from an Extended Participant Observation Grounded Theory Study}
 
 \author{
 \IEEEauthorblockN{ Todd Sedano }
-\IEEEauthorblockA{Pivotal \\
-  3495 Deer Creak Road \\
+\IEEEauthorblockA{Pivotal Software \\
   Palo Alto, CA \\
+  Carnegie Mellon University \\
+  Silicon Valley Campus \\  
   Email: professor@gmail.com}
+\and
+\IEEEauthorblockN{ Paul Ralph }
+\IEEEauthorblockA{University of Auckland \\
+  Auckland, New Zealand}
+\IEEEauthorblockA{University of British Columbia \\
+  Vancouver, BC, Canada \\
+  Email: paul@paulralph.name}
+\and
+\IEEEauthorblockN{ C\'ecile P\'eraire }
+\IEEEauthorblockA{Carnegie Mellon University \\
+  Electrical and Computer Engineering \\
+  Silicon Valley Campus \\
+  Moffett Field, CA 94035, USA \\
+  Email: cecile.peraire@sv.cmu.edu}
 }
 % make the title area
 \maketitle
 
-\section{Abstract}
- \textit{Context:} Conducting a Grounded Theory study is rigorous, demanding, and challenging. Misperceptions exist within the software engineering community \cite{StolGroundedTheory}.
+\section*{Abstract}
+\textit{Context:} Conducting a Grounded Theory study is rigorous, demanding, and challenging. Misperceptions exist within the software engineering community \cite{StolGroundedTheory}.
 
 \textit{Objective:} The purpose of this paper is to describe one extended participant observation Grounded Theory study for aiding new empirical researchers wanting to run similar research studies.
 
-\textit{Method:} Following Constructivist Grounded Theory, we conducted a \durationOfResearchStudy{} participant-observation of \numberOfObservedProjects{} software development projects at Pivotal, a software development organization, interviewed \numberOfInterviews{} software engineers, interaction designers, and product managers, and analyzed one year of retrospection topics. We iterated between analysis and theoretical sampling until achieving theoretical saturation.
+\textit{Method:} Following Constructivist Grounded Theory, we conducted a \durationOfResearchStudy{} participant-observation of \numberOfObservedProjects{} software development projects at Pivotal, a software development organization, interviewed \numberOfInterviews{} software engineers, interaction designers, and product managers, and analyzed one year of retrospection topics. We iterated between analysis and theoretical sampling until achieving theoretical saturation, publishing papers on team code ownership \cite{SedanoTeamCodeOwnership}, sustainable software development through overlapping code ownership \cite{SedanoSustainableSoftware}, and software development waste \cite{SedanoSoftwareDevelopmentWaste}. 
 
-\textit{Results:}  This paper describes the mis-steps, challenges, and unique insights that occurred while conducting a Grounded Theory study.
+\textit{Results:} This paper describes the mis-steps, challenges, and unique insights that occurred while conducting a Grounded Theory study.
 
 \textit{Limitations:} While the process and results are highly relevant to the researcher, the outcomes might not apply to other researchers.
 
 \textit{Conclusion:} Conducting my own Grounded Theory research study, attending Glaser's Seminar, and reading and re-reading Charmaz's and Glaser's books helped the researcher overcoming misperceptions about Grounded Theory research.
 \section{Introduction}
+For the past 2.5 years, I \footnote{We have written this paper in the first person because it predominantly recounts the experience of the first author and because its narrative elements flow better this way.} have been conducting a full-time, participant observation, Grounded Theory study. Participant observation is a data collection method where the researcher participates in the project or organization being observed \cite{Trochim2006ResearchMethods}. Grounded Theory is a comprehensive research methodology that generates theory from observations \cite{GlaserDiscovery}. 
 
-\participantQuote{Grounded Theory is such a simple method, yet so easily and often misapplied \cite{StolGroundedTheory}. It is easy to describe but hard to understand. My Grounded Theory study appears typical: confusion followed by insight. A researcher starts a Grounded Theory study open to see where the research leads. Once unleashed, the method seems to have a mind of its own as it guides the researcher towards research treasure through uncharted territory. I've been teaching and performing Extreme Programming for over 11 years, yet the method delighted me by finding precious insights}  \textemdash Todd Sedano \footnote{Interviewing oneself is an acceptable practice for participant observation in Grounded Theory even if it may seem like cheating}. 
+My first introduction to Grounded Theory came while reading Brown \cite{BreneBrownDaringGreatly} in March 2013. Brown details her journey in applying Grounded Theory to her psychological research about processing shame. Grounded Theory's focus on interpersonal communication appealed to me. Later, in May, I attended the first International Workshop on Conducting Empirical Studies in Industry (CESI 2013) and quizzed attendees about how they used Grounded Theory in their research. (Thanks to Irit Hadar and Christopher Bull for answering all of my questions.) During the main conference, (The 35th International Conference on Software Engineering), I attended each Grounded Theory presentation to learn more about how the community used the method.
 
-For the past 2.5 years, I have been conducting a full-time participant observation Grounded Theory study. Lengthy participant observation studies are unusual in software engineering and in computer science more generally. This paper describes my experiences in order to help future researchers considering a similar trajectory. 
+Lengthy participant observation studies are unusual in software engineering and in computer science more generally. Moreover, software engineering contexts present unique, unresolved challenges for longitudinal participant observation and Grounded Theory \cite{StolGroundedTheory}. The purpose of this paper is therefore to offer guidance, based on my experiences, for researchers considering a similar trajectory. While we should avoid overgeneralizing from a sample of one, others may benefit from some ideas to try and possible risks to keep in mind. 
 
-My first introduction to Grounded Theory came while reading Bren\'{e} Brown's \underline{Daring Greatly} \cite{BreneBrownDaringGreatly} in March 2013. Brown spends a significant portion of her book detailing her journey in applying Grounded Theory to her psychological research about processing shame. Given my strengths with interpersonal communication, the technique appealed to me. 
+Grounded Theory is such a simple method, yet so easily and often misapplied \cite{StolGroundedTheory}. It is easy to describe but hard to understand. My Grounded Theory study appears typical: confusion followed by insight. A researcher starts a Grounded Theory study open to see where the research leads. Once unleashed, the method seems to have a mind of its own as it guides the researcher towards research treasure through uncharted territory. I've been teaching and performing Extreme Programming for over 11 years, yet the method delighted me by finding precious insights 
 
-While attending ICSE in San Francisco in May 2013, I participated in the first International Workshop on Conducting Empirical Studies in Industry (CESI 2013). I pestered researchers about how they used Grounded Theory in their research. (Thanks to Irit Hadar and Christopher Bull for answering all of my questions.) After the workshop, during the main conference, I sought out each Grounded Theory presentation to learn more about how the community used the method.
-
-The structure of the paper follows the stages of a Grounded Theory study,  Section \ref{GettingStarted} \quotes{Getting started,} Section \ref{Analysis} \quotes{Analysis,} and Section \ref{TheoryConstruction} \quotes{Theory Construction,} and Section \ref{TheoreticalSaturation} \quotes{Theoretical Saturation}.
+The structure of the paper follows the stages of a Grounded Theory study, Section \ref{GettingStarted} \quotes{Getting started,} Section \ref{ConstantComparison} \quotes{Constant Comparison,} Section \ref{TheoryConstruction} \quotes{Theory Construction,} Section \ref{TheoreticalSaturation} \quotes{Theoretical Saturation, }  Section \ref{ManagingTheData} \quotes{Managing The Data,}  Section \ref{Publishing} \quotes{Publishing,} Section \ref{AdvantagesDisadvantages} \quotes{Advantages and Disadvantages of Extended Participant Observation,} and  Section \ref{Conclusion} \quotes{Conclusion.}
 \section{Getting Started}
 \label{GettingStarted}
 
-Following Glaser's advice of \quotes{just do it} \cite{GlaserIssues}, I learned the intricacies of Grounded Theory while conducting my first Grounded Theory study. At each stage of the research, I read the next few chapters to understand what I would be doing next. 
-
-This section examines early important decisions such as which varient to use, selecting a site, and gathering rich data.
+Following Glaser's advice of \quotes{just do it} \cite{GlaserIssues}, I learned the intricacies of Grounded Theory by diving into a study and reading about the methodology as I went. This section examines early important decisions such as which variant to use, selecting a site, and gathering rich data.
 \subsection{Selecting a Method Variant}
-Given the philosophical differences between the three variants of Grounded Theory, understand why you are selecting that variant. Initially, I chose Constructivist Grounded Theory simply because it was the latest, a fine justification for selecting software libraries, but as I later discovered, not the best reason for selecting a sociological research method. 
+Grounded Theory has many variants with both practical and philosophical differences. Initially, I chose Constructivist Grounded Theory simply because it was the latest, a fine justification for selecting software libraries, but as I later discovered, not the best reason for selecting a sociological research method. 
 
-I continue to use Constructivist Grounded Theory because it allows for the recording and transcription of interviews, enables literature review when appropriate in the research process, and builds upon decades of Grounded Theory research and experience. The philosophical stance of constructivism (as opposed to positivism) acknowledges the researcher's and participants' contributions to the construction of concepts. Positivistism acknowledges that knowledge from observable facts whereas constructivism posits that knowledge situated in a human context which may be more useful in understanding social interactions. For software engineering research, Constructivist Grounded Theory seems aptly suited since software development is a socio-technical endeavor.
+We continue to use Constructivist Grounded Theory for several reasons. Glaser's recommendations are not always practical (or acceptable in our community of practice); for instance, simply taking notes without recording/transcribing interviews and delaying the literature review until near the end of the study. Furthermore, a constructivist epistemology offers many advantages over Classic Grounded Theory's objectivist epistemology for software engineering contexts. Software development is a socio-technical endeavor. Many concepts software engineering researchers study are socially constructed (e.g. code, comments, tests, projects, schedules, teams). Moreover, software developers can be quite reflective and helpful in contributing to the construction of concepts. Constructivist Grounded Theory better acknowledges socially constructed concepts and participants' contribution to theorizing than many other Grounded Theory variants. 
 
-With transcriptions and line-by-line coding, Constructivist Grounded Theory generates a lot of data. Even still, I prefer the slower more intimate coding of Constructivist Grounded Theory.
+\textit{Recommendation:} If you want to just get started, begin with Stol's comparison of the three variants \cite{StolGroundedTheory}, read a few exemplars (e.g. \cite{SedanoSustainableSoftware, SedanoSoftwareDevelopmentWaste}), and then read Charmaz's book \cite{Charmaz}. If you want more depth about each variant, read Evan's article \cite{Evans2013novice}. Note that Evan includes Glaser's pontificating criticisms of Constructivist Grounded Theory \cite{GlaserConstructivistGroundedTheory}, but excludes Bryant's rebuttal \cite{Bryant2007}. 
 
-\textit{Recommendation:} If you want to just get started, begin with Stol's comparison of the three variants \cite{StolGroundedTheory}, read a few software engineering research papers such as \cite{SedanoSustainableSoftware, SedanoSoftwareDevelopmentWaste}, and then read Charmaz's book \cite{Charmaz}. If you want more depth about each variant, read Evan's article \cite{Evans2013novice}. Realize that Evan includes Glaser's pontificating criticisms of Constructivist Grounded Theory \cite{GlaserConstructivistGroundedTheory}, but excludes Bryant's rebuttal \cite{Bryant2007}. 
+My primary text was Charmaz \cite{Charmaz}, which I supplemented with Glaser's books \cite{GlaserDiscovery, GlaserTheoreticalSensitivity, GlaserIssues} to build a deeper understanding of the method and the historical context of Constructivist Grounded Theory. I find Charmaz's writing more approachable and less polemical than Glaser's. 
 
-My primary text was Charmaz \cite{Charmaz}, which I supplemented with Glaser's books \cite{GlaserDiscovery, GlaserTheoreticalSensitivity, GlaserIssues} to build a deeper understanding of the method and the historical context of Constructivist Grounded Theory. Charmaz's textbook is approachable. Glaser tends to jargonize.
+\textit{Lesson Learned:} I initially read Glaser's books in the wrong sequence. His works are additive and build on each other.
 
-\textit{Lesson Learned:} I initially purchased and read Glaser's books in the wrong sequence. His works are additive and build on each other.
-
-\textit{Recommendation:} If you select Constructivist Grounded Theory, start with Charmaz' book \cite{Charmaz}. Read Glaser's books in sequence, about a topic, to better understand the theoretical underpinnings of Grounded Theory. 
-
+\textit{Recommendation:} Read Glaser's books in order of publication, oldest first. 
 \subsection{Selecting a Research Site}
-We selected Pivotal because: 1) it is successful; 2) it is interesting in its continued use and evolution of extreme programming; 3) it is accessible and cooperative with research. Both Classic and Constructivist Grounded Theory advocate picking an interesting site to see \quotes{What's going on here?} 
-
 Pivotal Labs is a division of Pivotal\textemdash a large American software company (with 17 offices around the world). Pivotal Labs provides teams of agile developers, product managers, and interaction designers to other firms. Its mission is not only to deliver highly-crafted software products but also to help transform clients' engineering cultures. To change the client's development process, Pivotal combines the client's software engineers with Pivotal's engineers at a Pivotal office where they can experience Extreme Programming \cite{BeckExtremeProgramming2004} in an environment conducive to agile development. Pivotal Labs has followed Extreme Programming \cite{BeckExtremeProgramming2004} since the late 1990's. 
 
-\textit{Lessons learned:} We found selecting a consultancy to be helpful as they were open to us researching the way they work provided we did not reveal information about the client. The client owns the code, not the way of working. Revealing insights about Pivotal Labs aligned with its business goals. A consultancy provides exposure to many different projects, both greenfield and brownfield. Client-pivotal dynamics revealed the tension of adopting agile software development. A consultancy's focus on billing 40 hours a week required research activities (e.g. data collection, data analysis, and attending conferences) to be done on personal time.
+We selected Pivotal because: 1) it is successful; 2) it is interesting in its continued use and evolution of extreme programming; 3) it is accessible and cooperative with research. Both Classic and Constructivist Grounded Theory advocate picking an interesting site to see \quotes{What's going on here?} 
 
-\textit{Recommendation:} Since Grounded Theory starts with the question, \quotes{what is going on here?} start with an organization that excels at what you hope to research.
+\textit{Lessons learned:} Selecting a consultancy was helpful in several ways. Gaining insight into Pivotal Labs' way of working aligns with its business goals. They were therefore open to research provided we did not reveal information about clients. The client owns the code, not the way of working. Furthermore, a consultancy provides exposure to many different projects, both greenfield and brownfield. Client-Pivotal dynamics revealed tensions in adopting agile software development. However, the consultancy's focus on billing 40 hours per person per week limited research activities (e.g. data collection, data analysis, and attending conferences) to personal time.
+
+\textit{Recommendation:} Since Grounded Theory starts with the question, \quotes{what is going on here?} start with an organization that excels at what you hope to research. Consultancies can work well. Try to negotiate a 20-30 hour per week contract so you have time reserved for research.
 \subsection{Gathering Rich Data}
-The research study started with data from two sources: 1) interviews with Pivotal employees and 2) participant observation. When starting data collection, I had no notion of the number of interviews or amount of participant observation that I would conduct. 
+Initially, the two main data sources were interviews with Pivotal employees and notes on participant observation. We began with no solid expectations about the number of interviews or amount of participant observation that I would conduct. The interviewees consisted of interaction designers, product managers, and software engineers who had experience with Pivotal's software development process from five different Pivotal offices. At first, interviewees were selected opportunistically; for example, if a product manager visited from another office, I requested an interview. When I visited the Los Angeles area, I scheduled interviews at the Santa Monica office. 
 
-\textbf{Interviews:} The interviewees consisted of interaction designers, product managers, and software engineers who had experience with Pivotal's software development process from five different Pivotal offices. 
+\textit{Lesson learned:} Opportunistic interviewing sometimes generated an analysis backlog. 
 
-Interview candidates were selected opportunistically. If a Product Manager from the New York office visited the Palo Alto office, I would attempt to schedule an interview that day. When I visited the Los Angeles area for a vacation, I scheduled interviews at the Santa Monica office. 
+\textit{Recommendation:} Prioritize analysis over data collection. 
 
-\textit{Lesson Learned:} With opportunistic interviewing, it is easy to build a backlog of interviews to transcribe and code. 
-
-\textit{Recommendation:} Code and begin constant comparison promptly.
-
-\textit{Lesson learned:} Opportunistic interviewing sometimes built a backlog of interviews for me to transcribe, code, and analyze with constant comparison. 
-
-\textit{Recommendation:} Begin coding as soon as possible. Prioritize coding interviews over conducting another opportunistic interview. 
-
-I relied on \quotes{intensive interviews,} which are \quotes{open-ended yet directed, shaped yet emergent, and paced yet unrestricted} \cite{Charmaz}. Open-ended questions were used to enter into the participant's personal perspective within the context of the research question. The interviewer attempts to abandon assumptions to better understand and explore the interviewee's perspective. Charmaz \cite{Charmaz} contrasts intensive interviews with informational interviews (collecting facts), and investigative interviews (exposing hidden intentions, practices or policies).
+I relied focused on \quotes{intensive interviews,} which are \quotes{open-ended yet directed, shaped yet emergent, and paced yet unrestricted} \cite{Charmaz}, to abandon assumptions and better understand the interviewee's perspective. This influenced the type of data I collected for participant observation. 
 
 \textit{Lesson Learned:} Creating an interview guide helped me generate open-ended questions. Transcribing and coding my interviews enabled me to hear when I asked leading questions.
 
-\textit{Recommendation:} Create an interview guide and use it only three times. Constant comparison needs to direct questions in the interview.
+\textit{Recommendation:} Use an interview guide at most three times between revisions. This reinforces constant comparison and theoretical sampling. 
 
-The initial interviews were open-ended explorations starting with the question, \quotes{Please draw on this sheet of paper your view of Pivotal's software development process.} My goal was not to force initial topics and understand the perspective of the interviewee. Figure \ref{2015_08_12_simple} shows a simple drawing and Figure \ref{2015_08_12_detailed} shows a detailed drawing. 
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\oneColumnWidth{}]{drawings/interview8.png}
-\caption{Interview 8: Simple drawing of Pivotal's software development process}
-\label{2015_08_12_simple}
-\end{figure}
-
+I asked early interviewees to draw their \quotes{view of Pivotal's software development process.} Figure \ref{2015_08_12_detailed} shows one response. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\oneColumnWidth{}]{drawings/2015_08_12_anchor.png}
@@ -101,7 +94,7 @@ The initial interviews were open-ended explorations starting with the question, 
 \label{2015_08_12_detailed}
 \end{figure}
 
-When analysis shifted interviewing onto new topics, I would start with a new drawing question. Asking participants, \quotes{please draw your feelings about the code} often resulted in conversations about code ownership. Figure \ref{Interview31} shows an example. 
+When analysis shifted interviewing onto new topics, I would start with a new drawing question. For example, asking participants, \quotes{please draw your feelings about the code} often resulted in conversations about code ownership. Figure \ref{Interview31} shows an example. 
 
 \begin{figure}[htbp]
 \centering
@@ -110,147 +103,141 @@ When analysis shifted interviewing onto new topics, I would start with a new dra
 \label{Interview31}
 \end{figure}
 
-\textit{Lesson Learned:} Asking participants to draw provided a natural starting place for follow-up questions without forcing topics or perspectives.
+\textit{Lesson Learned:} Asking participants to draw helped understand their perspective and provide a natural starting place for follow-up questions without forcing topics or perspectives.
 
-\textit{Recommendation:} Start interviewing with a \quotes{Sedano} drawing question.
+\textit{Recommendation:} Try initiating interviews with a drawing question.
 
-\textbf{Participant Observation:} While working as an engineer, I participated on \numberOfObservedProjects{} sequential projects lasting \durationOfResearchStudyPlural{}. I collected field notes that describe individual and collective actions, capture what participants found interesting or problematic, and include anecdotes and observations. For details about each project see our paper on software development waste \cite{SedanoSoftwareDevelopmentWaste}.
+Meanwhile, I worked as a software engineer, on \numberOfObservedProjects{} sequential projects lasting \durationOfResearchStudyPlural{} (see \cite{SedanoSoftwareDevelopmentWaste} for details). I wrote extensive field notes on individual and collective actions, what participants found interesting or problematic, and emerging anecdotes and observations; for example: 
 
-Here is a portion of a field note: 
 \participantQuote{Monday was the first time we started getting data from the client's servers. We've been implementing for several months without knowing whether our system would work with real backend systems. In order to make progress, we created mocks for each of the client's systems based upon documentation. Now we need to modify our code base to match the reality of the systems' implementation.}
 
-\textit{Lesson Learned:} Collecting and analyzing field notes from participant observation is not easy. At the beginning of her research, Charmaz pictured a research experience where she would observe her research participants during the day and disappear into the coffee room to take detailed notes and write up her experience \cite{Charmaz}. She discovered that this is challenging in practice, as it can be difficult to disappear while observing activities. When the participant activity is intensive, such as the case with pair-programming, recording observations is tricky. I relied on small notes on post-it notes (which were culturally acceptable compared to typing on a laptop) and detailed observations after work.
+\textit{Lesson Learned:} Collecting and analyzing field notes from participant observation is not easy. Just as Charmaz discovered that taking breaks from observation to write down her thoughts can be difficult \cite{Charmaz}, I found it very challenging to record observations during intensive activities (e.g. pair-programming). 
 
-\textit{Recommendation:} Use post it notes for capturing insights during pair programming. Explain what you are doing to your pair. For example, \quotes{I want to reflect on what you said} or \quotes{what you said was really insightful} makes the participant feel valued. Record verbal notes on the drive home; some phones will convert spoken words into text.
-\section{ Analysis (Coding and Constant Comparison) }
-\label{Analysis}
-Data analysis began by iteratively collecting and analyzing interview transcripts and participant observations. I used line-by-line coding \cite{Charmaz} to identify nuanced interactions in the data and avoid jumping to conclusions. Whenever insight occurred, I would write it down as a memo.
+Participant observation provided a rich data for emergent ideas. For example, one day while pair programming, I realized that I did not know who was on my team because of significant team churn. This realization led me to convert task allocation data into a chart showing the start and stop dates for each team member, which raised the question, \textit{how was it possible to be successful \cite{RalphDimensionsOfSuccess} with the client with so many people rotating through the project?} Investigating this research question led to the Theory of Sustainable Software Development \cite{SedanoSustainableSoftware}.
 
-My advisor reviewed the initial codes while reading the transcripts and listening to the audio recordings.  We discussed the codes and the coding process during weekly research collaboration meetings. To avoid missing insights from these discussions \cite{GlaserTheoreticalSensitivity}, we often recorded and transcribed the discussion into Grounded Theory memos. As data was collected and coded, I stored initial codes in a spreadsheet and I used constant comparison to generate focused codes.
+\textit{Lesson Learned:} Participant observation often provided research insights not available from interviews or documents.
 
-\textit{Lesson Learned:} In retrospection, I have a personal tendency to continue too long with initial coding. When opening a transcript, I enter a comforting, familiar routine. 
+\textit{Recommendation:} Supplement interviews and document analysis with participant observation or direct observation (watching without interacting). Write detailed observations after work, but use post it notes or an unobtrusive notebook for capturing insights during intense activities. This was more culturally acceptable than typing on a laptop. Explain your actions to participants. For example, saying \quotes{I want to reflect on what you said} or \quotes{what you said was really insightful} makes the participant feel valued rather than ignored. In short breaks, try recording verbal notes; some phones will convert spoken words into text.
+\section{Constant Comparison}
+\label{ConstantComparison}
+I used line-by-line coding \cite{Charmaz} to identify nuanced interactions in the data and avoid jumping to conclusions. Whenever insight occurred, I would write it down as a memo. My advisor reviewed the initial codes while reading the transcripts and listening to the audio recordings. We discussed the codes and the coding process during weekly research collaboration meetings. To avoid missing insights from these discussions \cite{GlaserTheoreticalSensitivity}, we often recorded and transcribed the discussion into Grounded Theory memos. As data was collected and coded, I stored initial codes in a spreadsheet and I used constant comparison to generate focused codes.
+
+\textit{Lesson Learned:} I tend to continue too long with initial coding. 
 
 \textit{Recommendation:} Use constant comparison to drive research forward.
-
 \subsection{Understanding Constant Comparison}
-I attended Glaser's Grounded Theory Seminar in Mill Valley, CA hoping to better understand constant comparison. Glaser structures the workshop to help aid the attending researchers to move from their current phase to the next phase of the Grounded Theory process, not transition them to the final step. Glaser intentionally challenges a participant's point of view. From his perspective, an attendee having an emotional breakdown is a sign of a successful workshop.
+Glaser's seminal book assumes the reader is a sociologist, making it inaccessible to many software engineering researchers and other non-sociologists. The term \textit{constant comparison} is especially challenging. Struggling to understand it---not just remember the definition but deeply understand how it works---I read three of Glaser's books \cite{GlaserDiscovery, GlaserIssues, GlaserTheoreticalSensitivity} and attended one of his seminars in Mill Valley, CA. The workshop helped me understand Grounded Theory terms that were not clear from the books. I later discovered clearer definitions \cite{GlaserBasics} (see Figure \ref{glaserDefinitions}), which Glaser wrote in response to Strauss and Corbin's \cite{Strauss1988Basics} criticisms.
 
-Here's a personal memo from my experience, \participantQuote{Before my turn, he tore into a participant for bringing pre-conceived notions into the research. At the last moment, I changed my question for him. I regret that I panicked.  I'm kicking myself for not being true to my original question.  I am very glad to have a deeper understanding of Glaser's approach (since it is so hard to reverse engineer it from his books.) I feel like a failure, even though I am very happy with the work that I have done.}
-
-The workshop helped me understand the fundamental terms used in Grounded Theory. At the time, I was reading through three of Glaser's books \cite{GlaserDiscovery, GlaserIssues, GlaserTheoreticalSensitivity} and I was struggling to understand constant comparison and the conversion of codes into categories. These books do not clearly define the terms; distinguish the differences between the terms; nor provide clear examples illustrating the concepts. Listening to Glaser discuss the concepts helped me solidify what he meant by each term. Later, I discovered that another Glaser book \cite{GlaserBasics} does define the terms in response to Strauss and Corbin's book \cite{Strauss1988Basics}.
-
-\textit{Lesson Learned:} I needed to buy four of Glaser's books to properly understand his method.
-
-Glaser's seminal book assumes the reader is a sociologist. The terms can be confusing. I agree with Charmaz; \quotes{Charmaz  asserts that the abstract terms and dense writing employed in \underline{Theoretical Sensitivity} \cite{GlaserTheoreticalSensitivity} rendered the book inaccessible to many readers} \cite{GlaserConstructivistGroundedTheory}.
-
-\textit{Lesson Learned:} constant comparison is simply the comparing of codes to codes, codes to categories, codes within a category, and comparing categories to categories.
+\textit{Lesson Learned:} I needed to read four of Glaser's books and listen to him speak to properly understand constant comparison---Grounded Theory's main data analysis method. It involves continually comparing of codes to codes, codes to categories, codes within a category, and comparing categories to categories not only to generate and refine emerging theory but also to decide what data to collect next.
 
 I routinely compared new codes to existing codes to refine codes and eventually generate categories. I periodically audited each category for cohesion by comparing its codes. When this comparison became complex, I printed codes on index cards, and then arranged and re-arranged until cohesive categories emerged. I wrote memos to capture the analysis of codes, examinations of theoretical plausibility, and insights.
 
+\textit{Recommendation:} To deeply understand constant comparison, iterate between reading about grounded theory (or attending seminars) and analyzing your data. Accept that it takes study, practice and reflection to master. 
 
-\subsection{Pulling in literature when needed}
-As the ideas of code ownership began to solidify, I started reviewing the literature looking for how papers grappled with the idea of ownership. A paper on psychological ownership \cite{Pierce2001} allowed me to connect the deep human needs that fuel our need for ownership with team code ownership and explained how psychological ownership affects our transition from individual code ownership to team code ownership.
 
-When removing waste emerged as a topic, I examined Lean Software Development to understand how the Poppendiecks used the Toyota Production System waste taxonomy for software development \cite{PoppendieckConceptToCash}. This served as a nice foil for our emergent waste taxonomy.
-\subsection{Pulling in new data sources}
-When \textit{removing waste} appeared as a core category, we began collecting and analyzing data from retrospectives. (A retrospection meeting (or retro) is a weekly meeting to pause, reflect, and discuss the work done during the week, i.e., a safe place where any team member can discuss any issue.) We continued to collect participant observation data and continued interviewing until achieving theoretical saturation. 
+\begin{table}[t]
+\renewcommand{\arraystretch}{1.5}
+\centering
+\captionof{figure}{Glaser's Definitions \cite{GlaserBasics} }
+\label{glaserDefinitions}
+\begin{tabular}{|l|}
+\hline
+Concept: The underlying, meaning, uniformity and/or pattern within a set of descriptive incidents. \\ 
+Category: A type of concept. Usually used for a higher level of abstraction. \\
+Property: A type of concept that is a conceptual characteristic of a category, thus at a lesser level of abstraction than a category. A property is a concept of a concept. \\ 
+Coding: Conceptualizing data by constant comparison of incident with incident, and incident with concept to emerge more categories and their properties.
+\\ \hline
+\end{tabular}
+\end{table}
 
-\textit{Lesson Learned:}  Fortunately, I had been taking photos of retrospection meetings of co-located teams and used a Google Spreadsheet for distributed teams for over a year, so there was no waiting to gather the needed data. 
+\subsection{Pulling in new literature and data}
+As the \textit{code ownership} category emerged, I looked to literature on ownership in general. Understanding the psychology of ownership \cite{Pierce2001} allowed me to connect team code ownership to underlying emotional needs and explained how emotions affect the transition from individual code ownership to team code ownership.
+
+When \textit{removing waste} emerged as a topic, I examined Lean Software Development to understand how the Poppendiecks used the Toyota Production System waste taxonomy for software development \cite{PoppendieckConceptToCash}. Contrasting our emergent waste taxonomy with the Poppendiecks' top-down taxonomy helped us better understand and clarify its structure and elements. I also began collecting and analyzing data from retros. (A retrospection meeting (or retro) is a weekly meeting to collectively reflect on the work done during the week, i.e., a safe place where any team member can discuss any issue.) 
+
+\textit{Lesson Learned:} Fortunately, I had been recording retro issues for over a year, so there was no waiting to gather the needed data. 
 
 \textit{Recommendation:} Record easy to capture information, just in case. Take lots of photos.
+\subsection{Dealing with Confusion}
+During the analysis process, confusion can emerge. We found that sensemaking of comparing codes, naming concepts, defining terms, and identifying theoretical structure could be straightforward or anfractuous.
 
-\subsection{Combining Interviews with Participant Observation}
-In order to reduce researcher participant bias, I choose to allow interview data to initially drive constant comparison, which then influenced the type of data I collected for participant observation. Participant observation provided a rich data for emergent ideas. 
+Glaser said that \quotes{confusion is the royal road to emergence,} \cite{GlaserMillValleyWorkshop}. 
 
-\textit{Lesson Learned:} Participant observation often provided stories and examples of the research insights in action.
-\subsection{Dealing with Confusion and Focusing on a Manageable Topic}
-Finding a candidate structure that supported and explained the data took time. For a while, the data was fractured around many different topics and I struggled to integrate the data into a cohesive whole. I tried rotating and pivoting the data through different lenses. Glaser said that \quotes{confusion is the royal road to emergence,} \cite{GlaserMillValleyWorkshop} and confusion appears to be a typical, critical step for the Grounded Theory researcher. Eventually, I had my ah-ha moment when I found a candidate structure that explained the data at different levels of software development. 
-
-I reviewed the candidate structure with my committee. Since I had not fully written memos describing the emerging theory, I had difficulty in explaining the structure to my committee. Sensing that perhaps I had taken on too much with my first Grounded Theory study, my co-advisor suggested that I focus on one concrete category. 
-
-Lesson Learned: For a novice, learning Grounded Theory on a focused topic allowed me to make forward progress in performing constant comparison and working through theoretical sampling to theoretical sampling. Now that I have performed Grounded Theory a few times, I plan to work on theoretical saturation of my original theory.
-
-Recommendation: Learn Grounded Theory on a manageable topic.
-\subsection{Dealing with Confusion: Naming is Hard}
-For a long time during analysis, the dividing line between Team Code Ownership and Sustainable Software Development was unclear. Teasing apart these concepts was challenging, in part, because each concept had no clear name. 
-
-The analysis (coding the interviews, performing constant comparison for code ownership, and writing memos) revealed that the emerging idea expanded beyond Beck's \cite{BeckExtremeProgramming1999, BeckExtremeProgramming2004} and Fowler's \cite{FowlerCodeOwnership} idea for collective ownership and collective code ownership. The prior literature described collective code ownership as a policy statement, where teams would decide who could modify which parts of the code. In contrast with individual code ownership where one programmer owns a set of files, collective code ownership allowed anyone to modify any part of a system. I observed events that weakened a team's sense of ownership of the code. The team's sense of ownership was dynamic. I was analyzing something new. 
-
-I struggled with what to name the emerging idea. Is the emergent idea a modification of collective code ownership or is it fundamentally a different concept? My memos reflect the  journey of looking for an apt term: \quotes{I'm looking for a term that describes the relationship between the developer and their sense of ownership of the code.} My memos contain a progression from \quotes{code ownership} to \quotes{communal code ownership} to \quotes{collective code possession} to \quotes{team code ownership.} 
-
-We resolved the tension by defining a new term and differentiating it from collective code ownership. We defined team code ownership as \quotes{the ability for any developer on a team to change any of the team's code.} A team could decide to adopt collective code ownership and exhibit other behaviors (such as implementing hard to understand code or ostracizing a team member) that would make it challenging for a developer to modify the team's code.
-
-\textit{Lesson Learned:} Naming a new idea is hard.
-
-\textit{Recommendation:} Try \textit{in vivo} codes (phrases used by participants.) Try solving the problem in different settings such as taking a hike, or enjoying a hot tub.
-
-\subsection{Dealing with Confusion: What is Waste?}
-The analysis process revealed that answering the question, \quotes{is this topic a waste?} was no simple task. Often all three co-authors discussed if a topic was a waste type or a cause of waste. On one occasion, I longed to have a waste taxonomy as simple and well defined as the well-established Toyota Production System waste taxonomy. I noticed that the manufacturing waste of \textit{overproduction} created \textit{inventory} waste. Realizing that the accepted manufacturing waste taxonomy double counts one wasteful cause as two types of waste, reminded me that balancing simplicity with accuracy is challenging. 
-
-\subsection{Insights from Participant Observation}
-Example 1: When analyzing retrospection data, the short phrases written on a whiteboard did not provide enough context for understanding the underlying issue and potential waste. Participant observation provided the needed context for understanding the retro data. By experiencing the projects with the participants enabled me to reason about the issues. 
-
-Example 2: Participant observation enabled a crucial insight. One day as I was pair programming, I realized that I did not know who was on my team. Why? The team suffered from significant team churn. I wondered who had worked on the project. During my Christmas break, I converted the allocation data into a chart listing the start and stop dates for each team member. The graph surprised me. How was it possible to be successful \cite{RalphDimensionsOfSuccess} with the client with so many people rotating through the project? By following certain practices, the team thrived through disruptive events. The one insight followed by significant analysis led to the Theory of Sustainable Software Development. 
-
-
-\section{Theory Construction}
-\label{TheoryConstruction}
-The emergence of the relationship between team code ownership and sustainable software development required many iterations. 
-
-Understanding the idea that emerged from the analysis through constant comparison and memo writing proved problematic. Through the memoing process, I grappled with the ideas of code ownership and its relationship with a team thriving through team churn. While I knew that the two were related from the data, initially it was opaque to me where one stopped and the other started.  My process for solving this tension looked like this:
+My process for solving this tension looked like this:
 
 \begin{enumerate}
   \item Be confused
-  \item Try a relationship between the categories
+  \item Try an idea (e.g. a name, a definition, a relationship between categories)
   \item Iterate on Step 2
   \item Experience an \quotes{Ah ha} moment
   \item Verify with data
 \end{enumerate}
 
-I tried looking at parent-and-child relationships. Did ownership cover both ideas? No. Did the surviving team churn concept cover both ideas? Maybe. I tried sibling relationships. Were the two concepts equal to each other with an over arching idea comprising them?  No. I reviewed the 18 theoretical coding families in Glaser's \underline{Theoretical Sensitivity} \cite{GlaserTheoreticalSensitivity}. In time, my advisor and I labeled the surviving team churn category, \quotes{sustainable software development} with team code ownership as one of its properties. 
+\textit{Lesson Learned:} Confusion appears to be a typical, critical step for the Grounded Theory researcher.
+
+\textit{Recommendation:} Be patient, embrace the confusion.
+\subsection{Focusing on a Manageable Topic}
+For Glaser, a key matter is \quotes{what is the participant's main concern?} However, a study of this duration may produce several distinct core categories, necessitating ongoing scope adjustments. When my initial findings on course correcting seemed unwieldy, my co-advisor suggested that I focus on one concrete category at first. 
+
+\textit{Lesson Learned:} Ambitious Grounded Theory studies can illuminate several interesting phenomena. For a novice, initially concentrating on one area helps drive constant comparison and theoretical sampling. Later, you can return to the other phenomena.
+
+\textit{Recommendation:} When first learning Grounded Theory, focus on one emerging phenomenon of interest. 
+\section{Theory Construction}
+\label{TheoryConstruction}
+
+The iterative process of constant comparison and memo-writing that generates a grounded theory may be straight-forward (as it was with our software development waste taxonomy), or confusing (as it was for the theory of sustainable software development). Understanding the relationship between properties may require significant analysis. For example, I grappled with the nature of the relationship between code ownership and teams thriving despite excessive churn. Does ownership encompass both ideas? No. Does surviving churn cover both ideas? Maybe. Are both concepts manifestations of the same more abstract phenomenon? No. After reviewing Glaser's 18 theoretical coding families, I reconceptualized surviving team churn as \quotes{sustainable software development} with team code ownership as one of its properties. 
 
 We then started teasing apart the relationships between all the subcategories. Several felt different from each other. In time, we realized that some were practices, some were policies, and some were underlying principles. 
 
-Refining the practices into logical groups was hard. Articulating what is in the researcher's head can be difficult. We had identified six practices that supported sustainable software development by supporting team code ownership. We wondered if we could separate them into groups. My advisor proposed a separation based upon my advisor's expert opinion from reading the interview transcripts. The proposal did not resonate with me as the participant observation data did not entirely support it. The proposal spurred me into reconsidering the relationships between categories, much like when an editor is compelled to rewrite a poorly written sentence. I tried bifurcating the practices based on a series of questions. The question that worked for the data was, \quotes{which of these practices differently affects the code?} Three of them did. Then I asked \quotes{how are these other practices related?} Oh, they all touch on knowledge silos. I recalled two interviews. One interviewee discussed caretaking the code like a gardener. Another interviewee discussed concern about knowledge silos forming on the team. I then labeled each group with \textit{in vivo} codes. This process is how we discovered the \quotes{Caretaking the Code Practices} and \quotes{Removing Knowledge Silos Practices} categories. 
+Refining the practices into clear, logical groups was difficult. We identified six practices that supported sustainable software development by supporting team code ownership. My advisor proposed a separation based on her reading the interview transcripts, but it did not resonate with the participant observation data. This spurred me into reconsidering the relationships between categories based on different specific questions. The question that eventually worked was, \quotes{which of these practices differently affect the code?} Three of them do. Then I asked \quotes{how are these other practices related?} They all concern knowledge silos. I recalled one interviewee discussing caretaking the code like a gardener and another expressing concern over knowledge silos forming on his team. I then labeled each group with \textit{in vivo} codes (phrases used by participants), leading to the \quotes{Caretaking the Code Practices} and \quotes{Removing Knowledge Silos Practices} categories. 
 
-In Grounded Theory, the researcher must sit with uncomfortableness of the process. When in doubt, gather more data and continue constant comparison. In time, the brain will solve the problem find order in the chaos 
+\textit{Lesson Learned:} The theoretical structure may take time to emerge.
 
-Through iterations, the structure of the Theory of Software Development arrived. 
+\textit{Recommendation:} Review the 18 theoretical coding families in \underline{Theoretical Sensitivity} \cite{GlaserTheoreticalSensitivity}. However, do not adopt a coding family too readily---the coding family must earn its way into the theory like everything else.
 
-\textit{Lesson Learned:} Emergence of the theoretical structure may take time.
+Meanwhile, prior research treated code ownership as a team or organizational policy, whereas  our participants understood code ownership as an individual's feelings toward the code, further complicating matters. The progression in the memos is from \quotes{code ownership} to \quotes{communal code ownership}, \quotes{collective code possession} and eventually  \quotes{team code ownership} reflect my search for the best terms.
 
-\textit{Recommendation:} Review the 18 theoretical coding families in \underline{Theoretical Sensitivity} \cite{GlaserTheoreticalSensitivity}.
+\textit{Lesson Learned:} Choosing the right names for emerging ideas is important and challenging.  
 
+\textit{Recommendation:} When struggling with names, try \textit{in vivo} codes or terms used in existing literature. Try using variants in memos and conversations and see if any of them work. It is normal to feel conceptually uncomfortable during a Grounded Theory study. When in doubt, simply continue data collection and constant comparison.
 \section{Theoretical Saturation}
 \label{TheoreticalSaturation}
-Once a theory emerged, the questions arose: \quotes{what more data do I need to collect?} and \quotes{is this good enough for publication? }
+Once a theory emerged, the next question was \quotes{what more data do I need to collect?} Starting this research study, I thought I understood theoretical saturation. Eventually, I realized that I did not, and that the widely held definition of theoretical sampling as \quotes{the phase of qualitative data analysis in which the researcher has continued sampling and analyzing data until no new data appear and all concepts in the theory are well-developed} \cite{MorseTheoreticalSaturation} is problematic. 
 
-Starting this research study, I thought I understood theoretical saturation. Eventually, I realized that I did not, and I struggled to understand the concept. 
+Sampling until no new data emerges is subtly different than sampling to elaborate the emerging theory. 
 
-There's a subtle distinction between “sampling until no new data emerges” and sampling to flesh out the emerging theory. In discussing theoretical sampling or “saturation” with software engineering researchers practicing Grounded Theory at ICSE 2013, I misconstrued theoretical sampling as the continued collection of data until no new data and thus no new insights emerge. Stopping the process is logical if the collection of data results in the same kind of information. However, theoretical sampling has a subtle distinction from this misconception. Grounded Theory is not about asking the same questions over and over again until the same questions result in no new information. Grounded Theory alters the questions in response to the emerging data, and the researcher continues to ask new questions to help fill in the emerging theory. Thus, theoretical sampling is collecting new information to illicit the relationship between codes, between codes and categories, and between categories. The process stops once the researcher has matured the theory as there is nothing more to ask the participants since there are no more questions to be answered.
+Grounded Theory is not about repeating the same questions until they stop producing new information. The Grounded Theorist alters the questions based on the emerging data and asks new questions to help elaborate and corroborate the relationships between codes, between codes and categories, and between categories in the emerging theory. The process stops once the researcher is satisfied that the theory's concepts and relationships are mature and the theory feels whole. 
 
-Here is an example of resolving theoretical saturation. On one project, the backlog routinely had blocked stories at the top of the backlog. On other projects, the Product Manager would move blocked stories to the icebox and then reprioritize the stories into the backlog when ready. Since blocked stories at the top of the backlog may be unusual, sometimes developers would begin working on a story before realizing that the story had a \quotes{blocked} label on it. Quickly, the developers learned to skim down the list of next stories to find the first ready story to work on. The developers complained about this inefficiency during a retro. Clearly starting and stopping stories is inefficient. I wondered if blocked stories were a waste in and of themselves. In follow-up interviews with Product Managers, I ascertained that waiting for information is a normal part of Product Managers' workflow as they try and prepare a story for readiness. A Product Manager handles context switching of information so that the engineers have ready-to-work-on-stories. For the Product Manager, there can be natural waiting waste. Blocked stories are not a symptom of a larger problem on the team.
-
-At one point, I asked my advisor and co-advisor, \quotes{what questions should I ask my participants to achieve theoretical saturation?} In retrospection, this was an unfair question. As the primary researcher, I know the data the best, and I am the one most qualified to know which relationships between the categories are not robust. Although I did not realize it at the time, I was \textit{already} asking questions to better understand the emergent theory. In essence, I wanted my advisors to bless my results and let me know that I was doing the process correctly, instead of relying on the emergence from the data.
-
-I shifted from asking \quotes{what questions will get me theoretical saturation?} to asking myself, \quotes{what do I not know about this theory?}, \quotes{what is confusing?}, and \quotes{how do each of these categories relate?}
-
-I finally understood Theoretical Saturation by re-reading Charmaz and Glaser many, many times. 
-
-\textit{Lesson Learned:} Theoretical sampling is collecting additional data to develop full and robust categories, identify the relationships between categories, and flush out the main category's properties.
-
-\section{Managing the Data}
-Over the course of this research study, the tools that I used for constant comparison evolved. I now prefer using tactile manipulatives over electronic storage. 
-
-Here is my experience:
+More data collection will often still reveal new concepts. The researcher may decide against including or further exploring these concepts for several reasons:
 \begin{enumerate}
-  \item I initially did all constant comparison in google spreadsheets
-  \item I started hand-writing cards for hard-to-understand or complex comparisons and I would physically sort them around me in a circle (e.g. needing to make sense of multiple perspectives about a backlog)
+  \item The concept is not directly relevant to the current theory (out of scope).
+  \item The concept represents a poor depth-to-parsimony tradeoff, that is, adding the concept would increase the theory's complexity without a reasonable corresponding increase in explanatory power. 
+  \item The concept would take the theory in a new direction, which would require a different site or kind of study to investigate. 
+  \item The concept has not earned its way into the theory. Potentially, a new Grounded Theory study at different site would be result in more incidents revealing that concept. 
+\end{enumerate}
+
+In other words, the idea of no new data appearing is rooted in interview-focused, sociological research where interviewees just stop saying anything new. In participant-observation, software engineering research, we often have much more data than we can manually analyze, so \quotes{no new data} never happens. Researchers must use personal judgment and experience to recognize a saturated theory and halt data collection.   
+
+At one point, I asked my advisor and co-advisor, \quotes{what questions should I ask my participants to achieve theoretical saturation?} This was unfair in retrospect. As the primary researcher, I am the one most qualified to know which relationships between the categories are not robust. I shifted from asking \quotes{what questions will get me theoretical saturation?} to asking myself, \quotes{what do I not know about this theory?}, \quotes{what is confusing?}, and \quotes{how do each of these categories relate?}
+
+I finally understood Theoretical Saturation by reading and re-reading Charmaz and Glaser, experiencing saturation firsthand and discussing these challenges with my advisor and co-advisor. 
+
+\textit{Lesson Learned:} Theoretical sampling is collecting additional data to develop full and robust categories, identify the relationships between categories, and elaborate the main category's properties.
+
+\textit{Recommendation:} For saturation, focus on exploring and corroborating the emerging theory. Do not expect new data to dwindle.  
+\section{Managing the Data}
+\label{ManagingTheData}
+During the study, I shifted from electronic to paper aids for constant comparison, as follows. 
+\begin{enumerate}
+  \item I initially did all constant comparison in Google spreadsheets
+  \item I started hand-writing cards for hard-to-understand or complex comparisons and physically sorting them around me in a circle (e.g. needing to make sense of multiple perspectives about a backlog)
   \item I printed the codes directly related to team code ownership onto index cards
   \item I printed all the retrospective notes onto index cards
 \end{enumerate}
 
-The advantages of electronic storage include:
+When looking at rows in a spreadsheet, I found them blurring together and easy for me to gloss over. When holding a card, I felt compelled to consider it before putting it down. In a spreadsheet, I subconsciously felt that adjacent rows were related even when they were not. With physical cards, I found that picking up the next card helped me see it as something new. However, maintaining \textit{both} an electronic and physical copy was time consuming and felt wasteful.
+
+The advantages of digital aids include:
 \begin{itemize}
   \item Available wherever you have a computer
   \item Easy to share with co-authors
@@ -258,7 +245,7 @@ The advantages of electronic storage include:
   \item Simple to turn into physical cards
 \end{itemize}
 
-The advantages of physical medium include:
+The advantages of physical aids include:
 \begin{itemize}
   \item Easy to rearrange
   \item Easy to see big picture 
@@ -269,100 +256,63 @@ The advantages of physical medium include:
   \item Time consuming to turn into electronic storage
 \end{itemize}
 
-Holding a card typically forces me to consider it before putting it down. When looking at rows in a spreadsheet, they tend to blur together and it's easier for me to gloss over them. When I see rows near each other in a spreadsheet there is a subconscious implication that they belong together. The act of picking up the next physical card resets my brain as it implies that it is something new. 
+\textit{Lesson Learned:} Sometimes using physical media can help with constant comparison. 
 
-\textit{Lesson Learned:} For the waste taxonomy, I maintained \textit{both} an electronic and physical copy which was time consuming and felt wasteful. 
+\textit{Recommendation:} There are many good ways to analyze data, and researchers need to find the techniques that work for them, but if you are getting lost in spreadsheets or NVivo, physical cards are worth trying.
+\section{Publishing}
+\label{Publishing}
 
-\textit{Recommendation:} For my next study, I'm planning on coding using Microsoft Word, converting the codes into a Microsoft Excel spreadsheet for printing onto index cards. I would then manage index cards until the camera ready version of the paper is submitted. Finally, I would update the code's categories in Excel for archival purposes.
+I expected and experienced three main challenges with publishing this research. To the extent software engineering reviewers are familiar with Grounded Theory at all, they are accustomed to much shorter, interview-centric studies. Some of our reviewers did not understand analyses on data types (e.g. retrospective items) not usually used in Grounded Theory, or understand that such a long study produces multiple core categories, which cannot be addressed all in one paper. Meanwhile, some reviewers appear suspicious of qualitative research in general. To overcome their concerns, I distributed the methodology and findings very carefully across several interconnected papers. 
 
-Grounded Theory researchers discovers what data managment techniques work for them. 
-\section{Advantages of Extended Participant Observation}
-Extended participant observation allows for a deep understanding of the participant's point of view. In this study, I have paired program for almost 4,800 hours. Through 1000's of conversations, I know what people agree and disagree about. 
+\textit{Lesson Learned:} It is extremely difficult to convey a large, participant-observation Grounded Theory study in a series of short papers, such that its methodological rigor is established and its findings are clear.
+
+\textit{Recommendations:} Use existing guidance for presenting grounded theory to a software engineering audience \cite{StolGroundedTheory}. Rather than a long methods section, distribute ample methodological detail throughout the paper where appropriate. Explicitly address differences between interviews and participant observation. Clearly explain that you have conducted a \textit{long} study with several core categories, and that this paper only talks about this one category because space precludes treating all categories simultaneously. You can even cite our papers as precedent. Use a table or figure with examples to show the chain of evidence from raw data to categories. As reviewers, remember that the size of a competent grounded theory analysis precludes visualization even in a long journal article.
+\section{Advantages and Disadvantages of Extended Participant Observation}
+\label{AdvantagesDisadvantages}
+Extended participant observation allows for a deep understanding of participants points of view. During this study, I have done almost 4,800 hours of pair programing. After thousands of conversations, I know what participants agree and disagree on. 
 
 \textit{Lesson Learned:} Extended participant observation develops deep understanding of participant's perspective.
 
 Many software engineering researchers began in the software development field because they enjoy writing software. Writing code with a development team exposes the researcher to the latest software development techniques employed in industry. A researcher who has experienced pair programming for several weeks may have a richer experience to draw upon than a researcher who has no pair programming experiences.
 
-\textit{Lesson Learned:} Extended participant observation improves the researcher's technical skills, understanding of development processes, and improves empathy for software developers.
+\textit{Lesson Learned:} Extended participant observation improves the researcher's technical skills, understanding of development processes, and empathy for software developers.
 
+\textit{Recommendation:} Recognizing that it does not work for everyone, consider participant observation (or direct observation). Avoid over-reliance on interviews.
 
-This works for a particular type of individual. I do not recommend for all.
+During extended, participant observation, promotion may present a dilemma. At one point, I was encouraged to apply for a promotion to Associate Director, a sales role with no time for coding. Because working directly with the teams was crucial for my research, getting this position would have derailed the study.. 
 
+Furthermore, the research cycle gets complicated. When is the right time to present research findings? Would presenting research findings alter the system under study? I resolved these tensions by not withholding my opinions while pair programming, making decisions that were best for clients, my company, and my team. For example, I suggested adding retros to a team that was missing them, and for a struggling team, I introduced stress relieving measures and team building exercises.
 
-\section{Concerns of Extended Participant Observation}
-In extended full-time participant observation, promotion opportunities arise and present a dilemma. For my research, working directly with the teams was crucial. The Engineering Manager position is a coaching role for engineers. Engineering managers are assigned to teams and most of their time is still pair programming. They spends a few hours a week mentoring reports. Accepting this role enabled me to better understand the business context and management perspective. The next level of management in the consultancy was a sales role with no time for coding. Taking this position would have shortened by research study. 
+The academic cycle of writing papers, submitting, resolving reviewer comments, and presenting the research is lengthy. Since Grounded Theory produces theories that are grounded in the observed context, we realized that sharing my published insights would not adversely affect my research. Giving my academic talks at Pivotal offices became a way for me to give back. 
 
-\textit{Lesson Learned:} Considering taking a promotion has nuanced implications. 
+\textit{Lesson Learned:} Sharing my published research with the organization resulted in lengthy helpful conversations. 
 
-In extended full-time participant observation, the research cycle is tricker. When is the right time to present research findings? Would presenting research findings affect the subject under study? I resolved these tensions by not withholding my opinions while pair programming, making decisions that were best for the client, my company, and my team. For example, I suggested adding retros to a team that was missing them and I introducing stress relieving measures and team building exercises for a struggling team.
+Moreover, business goals do not always align with the research goals. The research may be at the mercies of the business. Business needs dictated my rotation from team to team. Fortunately, most of my rotations enhanced my research, but I could be moved from a really interesting project to one with little research potential. At one point, I was even transferred to a different business unit. It did not undermine the research, but it could have. 
 
-The academic cycle of writing papers, submitting, resolving reviewer comments, and presenting the research is lengthy. Grounded Theory produces theories that are grounded in the observed context and realized that sharing my published insights would not adversely affect my research. Giving my academic talks at Pivotal offices became a way for me to give back. 
+\textit{Lesson Learned:} Business decisions can have profound impacts on research. 
 
-\textit{Lesson Learned:} Sharing my published research with the organization resulted in lengthy helpful conversations. For example, one 25 minute presentation generated 20 minutes of deep discussion.
-
-Business goals might not align with the research goals. The research may be at the mercies of the business. Business needs dictated my rotation from team to team. Fortunately, most of my rotations enhanced my research. Hypothetically, it might be possible to be on a really interesting project from a research perspective but then are re-allocated to another team. 
-
-Pivotal Labs management decided that the Silicon Valley area did not need two Pivotal Labs offices, one in San Francisco and one in Palo Alto. As a researcher, I had to decide whether to increase my commute by 3 hours a day in order to continue to study the same organization or to stay in Palo Alto and transfer to a different business unit that was transitioning from an ad-hoc software development method to extreme programming. The business decision could have profound impacts on my research. 
-
-\textit{Lesson Learned:} Business decisions could have profound impacts on research. 
-
-Balancing 40 hour a week coding job, research, and family is tricky. One participant said, \quotes{I can't believe you wrote this paper.} I kept saturdays free, and often used it for rest. 
-
-\textit{Lesson Learned:} As observed by Glaser, Grounded Theory is easy to interupt and pick up again. \quotes{Built into the method, is the ability to put it down at will and pick it up later with virtually no need to backtrack or unduly review where the researcher was before the break in pace. The study is always ready to go forward on the current, next step. Thus there is no need to sacrifice the requirements of and need for family, friends and recreation for the research. The research in progress is always there waiting to move forward when the researcher can return to it} \cite{GlaserIssues}.
+Glaser observed that Grounded Theory is easy to interrupt and pick up again. \quotes{Built into the method, is the ability to put it down at will and pick it up later with virtually no need to backtrack or unduly review where the researcher was before the break in pace. The study is always ready to go forward on the current, next step. Thus there is no need to sacrifice the requirements of and need for family, friends and recreation for the research. The research in progress is always there waiting to move forward when the researcher can return to it} \cite{GlaserIssues}. That said, balancing a 40-hour work week, research, and family is challenging. I kept saturdays free, and often used it for rest. 
 
 \textit{Recommendation:} Build in rest time into your schedule.
 
+As a developer, I have access to the stories in the backlog, daily conversations with my pair, team discussions, daily standups, weekly planning meetings, weekly retrospection meetings,  and the code itself. There is a lot of potential data to analyze---much more than just interviews. The retrospection dataset alone had 663 items. The volume of data can be overwhelming. I resonated with the saying, \quotes{a potential problem with ethnographic studies is seeing data everywhere and nowhere, gathering everything and nothing} \cite{Charmaz}. 
 
-
-
-
-
-In extended full-time participant observation, the available data can be overwhelming.
-
-As a developer, I have access to the stories in the backlog, daily conversations with my pair, team discussions, daily standups, weekly planning meetings, weekly retrospection meetings,   and the code itself. There is a lot of potential data to analyze. I resonated with the saying, \quotes{a potential problem with ethnographic studies is seeing data everywhere and nowhere, gathering everything and nothing} \cite{Charmaz}.
-
-\textit{Lesson Learned:} I used the emergent ideas in constant comparison to guide what kinds of data I collected.
-
-In addition to the types of data, Constructivist Grounded Theory itself generates volumes of data. A 60 minute interview could easily produce 100 codings which become fodder for constant comparison. The retrospection dataset had 663 items.
-
-\textit{Lesson Learned:} Constructivist Grounded Theory itself generates volumes of data.
+\textit{Recommendation:} Use the ideas emerging from constant comparison to guide what kinds of data to collect. 
 \section{Conclusion}
 \label{Conclusion}
-As documented by Stol et al \cite{StolGroundedTheory} common misperceptions exist in software engineering literature about Grounded Theory. By describing my own journey, I hope that the next generation of Grounded Theory researchers can learn from my experience. 
+This paper attempts to use my experience running an ambitious grounded theory study to illustrate some challenges and recommend some practices that I found helpful. Some of the key challenges are as follows:
+Grounded Theory is more complicated than it first appears. I had to not only experience the method firsthand, but also read and re-read several seminal texts to really understand it.
+Questions asking participant to draw a picture helped me focus on interviewees' perspectives and avoid forcing topics. 
+Participant observation revealed many insights that interviews could not. 
+Prioritizing analysis over data collection help me avoid getting overwhelmed.
+My datasets were too unwieldy to analyze digitally; using physical index cards helped tremendously. 
+Theoretical sampling is difficult to recognize and widely misunderstood. It is more about elaborating the emerging theory than running out of data. 
+Extensive methodological detail and explicitly confronting the unusual aspects of the study helped assuage reviewer concerns. 
 
-For me, understanding the core terms, \quotes{codes} and \quotes{categories} 
+Glaser says that a Grounded Theory study can create a rich trove of data. Indeed, I am still collecting and analyzing data and there is much more here worth studying. If you are conducting a Grounded Theory study of your own, and especially if you are struggling, please feel free to contact me.
 
-Theoretical saturation is collecting additional data to develop full and robust categories, not collecting additional data until nothing new emerges. Theoretical sampling pivots the data collection process to collect missing information. 
-
-My thinking evolved from \quotes{I have access to this data, what do I do with it?} to \quotes{given this participant's concern or observation, how do I get the data to flesh out the idea?}
-
-I have evolved my Grounded Theory process from using of electronic tools for constant comparison to using physical index cards.
-
-Each Grounded Theory might follow a path of confusion followed by insight. Finding a clarifying question may help position the analysis, however this question is unique to the study's confusion.
-
-Glaser says that a Grounded Theory study can create a rich trove of data. I am still analyzing the data and look forward to the next papers to come from this research study.
-
-Please contact me when you are starting your Grounded Theory study.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section*{Acknowledgement}
+Thank you to Rob Mee, David Goudreau, Ryan Richard, and Zach Larson for making this research possible.
 
 
 
